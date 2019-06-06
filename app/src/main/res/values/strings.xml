@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">retrofit_life_data_room_mvp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragmentMy</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_hint_text_login">Email</string>
+    <string name="login_hint_text_password">Password</string>
+    <string name="login_text_view_register">Register</string>
+    <string name="login_error_message">Login or Password is invalid</string>
+
+    <string name="register_edit_text_nick_hint">Nick name</string>
+    <string name="register_edit_text_password_hint">Password</string>
+    <string name="register_edit_text_confirm_password_hint">Confirm Password</string>
+    <string name="register_edit_text_email_hint">Email</string>
+    <string name="register_button_regisstre">Register</string>
+    <string name="register_login">Login</string>
+
+    <string name="list_fragment_title">Favorite</string>
+    <string name="login_fragment_title">Login</string>
+    <string name="register_fragment_title">Register</string>
+    <string name="edit_item_fragment_title">Edit</string>
+    <string name="create_item_fragment_title">Create item</string>
+
+
+    <string name="menu_text_favorit">Favorites</string>
+    <string name="menu_text_all_lists">Lists</string>
+    <string name="menu_text_profile">Profile</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/my_graph"
+            app:startDestination="@id/mainActivity">
+
+    <activity android:id="@+id/mainActivity" android:name="com.lordtaylor.retrofit_life_data_room_mvp.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/loginFragment"
+              android:name="com.lordtaylor.retrofit_life_data_room_mvp.ui.login.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_mainActivity" app:destination="@id/mainActivity"
+                app:enterAnim="@anim/fui_slide_in_right"/>
+    </fragment>
+    <fragment android:id="@+id/registerFragment"
+              android:name="com.lordtaylor.retrofit_life_data_room_mvp.ui.register.RegisterFragment"
+              android:label="fragment_register" tools:layout="@layout/fragment_register">
+        <action android:id="@+id/action_registerFragment_to_mainActivity" app:destination="@id/mainActivity"/>
+        <action android:id="@+id/action_registerFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+    </fragment>
+    <fragment android:id="@+id/favoriteListFragment"
+              android:name="com.lordtaylor.retrofit_life_data_room_mvp.ui.lists.fav_list.FavoriteListFragment"
+              android:label="fragment_favorite_list" tools:layout="@layout/fragment_favorite_list">
+        <action android:id="@+id/action_favoriteListFragment_to_listaBaseFragment"
+                app:destination="@id/listaBaseFragment"/>
+    </fragment>
+    <fragment android:id="@+id/deatailFragment"
+              android:name="com.lordtaylor.retrofit_life_data_room_mvp.ui.detail.DeatailFragment"
+              android:label="fragment_deatail" tools:layout="@layout/fragment_deatail">
+        <action android:id="@+id/action_deatailFragment_to_favoriteListFragment"
+                app:destination="@id/favoriteListFragment"/>
+    </fragment>
+    <fragment android:id="@+id/listaBaseFragment"
+              android:name="com.lordtaylor.retrofit_life_data_room_mvp.ui.lists.ListaBaseFragment"
+              android:label="fragment_lista_base" tools:layout="@layout/fragment_lista_base">
+        <action android:id="@+id/action_listaBaseFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_listaBaseFragment_to_mainActivity" app:destination="@id/mainActivity"
+                app:enterAnim="@anim/fui_slide_in_right" app:exitAnim="@anim/fui_slide_out_left"/>
+    </fragment>
+</navigation>
