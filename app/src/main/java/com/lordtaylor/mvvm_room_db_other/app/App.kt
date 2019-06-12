@@ -1,8 +1,6 @@
 package com.lordtaylor.mvvm_room_db_other.app
 
 import com.lordtaylor.mvvm_room_db_other.di.Basic.BasicApp
-import com.lordtaylor.mvvm_room_db_other.di.Components.DaggerPresenterComponent
-import com.lordtaylor.mvvm_room_db_other.di.Components.PresenterComponent
 import com.lordtaylor.mvvm_room_db_other.presistance_room.AppDao
 import com.lordtaylor.mvvm_room_db_other.presistance_room.AppDatabase
 import com.lordtaylor.mvvm_room_db_other.presistance_room.AppDatabase_Impl
@@ -31,6 +29,7 @@ class App : BasicApp(), KodeinAware {
         different approach
         bind<AppViewModelFactory>() with provider { AppViewModelFactory(instance()) }
          */
+
     }
 
 
