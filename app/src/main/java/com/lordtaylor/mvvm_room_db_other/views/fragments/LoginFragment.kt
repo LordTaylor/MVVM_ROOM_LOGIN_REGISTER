@@ -1,4 +1,4 @@
-package com.lordtaylor.mvvm_room_db_other.views
+package com.lordtaylor.mvvm_room_db_other.views.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

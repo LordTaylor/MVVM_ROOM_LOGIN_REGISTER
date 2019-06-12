@@ -6,7 +6,15 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(indices = arrayOf(Index(value = ["userid"], unique = true)))
-data class FirstItem(@PrimaryKey(autoGenerate = true) var _id: Long, @ColumnInfo(name = "userid") var id: String="", var name: String="", var description: String="", var icon: String="", var timestamp: String=""):BaseItem {
+data class FirstItem(
+    @PrimaryKey(autoGenerate = true)
+    var _id: Long, @ColumnInfo(name = "userid")
+    var id: String = "",
+    var name: String = "",
+    var description: String = "",
+    var icon: String = "",
+    var timestamp: String = ""
+) : BaseItem {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false

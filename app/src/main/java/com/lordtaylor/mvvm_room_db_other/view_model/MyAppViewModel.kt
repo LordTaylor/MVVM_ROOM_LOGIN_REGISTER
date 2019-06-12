@@ -1,14 +1,11 @@
 package com.lordtaylor.mvvm_room_db_other.view_model
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import com.lordtaylor.mvvm_room_db_other.repository.FirstRepository
+import androidx.lifecycle.ViewModel
+import com.lordtaylor.mvvm_room_db_other.models.BaseItem
+import com.lordtaylor.mvvm_room_db_other.repository.BaseRepository
 
-class MyAppViewModel constructor(application: Application) : AndroidViewModel(application) {
+class MyAppViewModel(private val repository: BaseRepository) : ViewModel() {
 
-    var repo:FirstRepository
-
-    init {
-        repo = FirstRepository()
-    }
+    fun addItem(item: BaseItem) = repository.insertToDB(item)
+    fun getItems() = repository.getAllItems()
 }

@@ -9,6 +9,7 @@ import com.lordtaylor.mvvm_room_db_other.models.FirstItem
 @Database(entities = arrayOf(FirstItem::class),version = 1,exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
+    abstract fun getDao():AppDao
 
     companion object {
         @Volatile

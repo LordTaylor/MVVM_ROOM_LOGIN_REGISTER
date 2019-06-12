@@ -1,7 +1,10 @@
 package com.lordtaylor.mvvm_room_db_other.repository
 
-class FirstRepository :BaseRepository{
-    override fun insertToDB() {
+import com.lordtaylor.mvvm_room_db_other.models.BaseItem
+import com.lordtaylor.mvvm_room_db_other.presistance_room.AppDao
+
+class FirstRepository (private val dbDao: AppDao):BaseRepository{
+    override fun insertToDB(item: BaseItem) {
 
     }
 

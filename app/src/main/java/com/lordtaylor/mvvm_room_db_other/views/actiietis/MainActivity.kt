@@ -1,9 +1,10 @@
-package com.lordtaylor.mvvm_room_db_other
+package com.lordtaylor.mvvm_room_db_other.views.actiietis
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import com.lordtaylor.mvvm_room_db_other.R
 import com.lordtaylor.mvvm_room_db_other.view_model.MyAppViewModel
-import com.lordtaylor.mvvm_room_db_other.views.LoginFragment
+import com.lordtaylor.mvvm_room_db_other.views.fragments.LoginFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         myViewModel = ViewModelProviders.of(this).get(MyAppViewModel::class.java)
-        supportFragmentManager.beginTransaction().replace(R.id.base_container,LoginFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_container,
+            LoginFragment()
+        ).commit()
     }
 }
